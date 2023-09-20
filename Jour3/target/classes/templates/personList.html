@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Person List</title>
+</head>
+<body>
+<h2>Person List</h2>
+<ul>
+  <li th:each="person : ${persons}">
+    <span th:text="${person.name}"></span>, Age: <span th:text="${person.age}"></span>
+    <a th:href="'/persons/edit/' + ${person.id}">Edit</a>
+    <a th:href="'/persons/delete/' + ${person.id}">Delete</a>
+  </li>
+</ul>
+<a href="/persons/add">Add Person</a>
+</body>
+</html>

@@ -14,13 +14,11 @@ public class Person {
     private String name;
     private int age;
 
-    // Constructors
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -53,5 +51,4 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
-
 }
